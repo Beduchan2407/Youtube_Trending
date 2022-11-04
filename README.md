@@ -9,7 +9,7 @@ This repo provides the ETL, to ingest youtube's data into a data warehouse. The 
 * Each regions's data is in a separate file. Data includes the video title, channel title, publish time, tags, views, likes and dislikes, description, and comment count.
 * The data also includes a catagory_id field, which varies between regions. To retrieve the categories for a specific video, find it in the associated JSON. One such files is included for each of regions in the dataset
 ## Data warehouse design
-* For the schema design, the STAR schema is used as it simplifies queries and provides fast aggregations od data
+* For the schema design, the STAR schema is used as it simplifies queries and provides fast aggregations of data
 ![Data_warehouse_design](Image/Data_Warehouse_Design.jpg)
 * There are 2 types of data involved, videos.csv and category_id.json. These two files will be join together to find the corresponding category_title and then we extract informations and load it into dim and fact tables
 ## ETL Pipeline
